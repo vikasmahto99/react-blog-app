@@ -32,7 +32,12 @@
   margin-top: 20px;
 }
 
-.postCat {
+.postCategories {
+  display: flex;
+  gap: 10px;
+}
+
+.postCategory {
   font-family: "Varela Round", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -44,9 +49,13 @@
   transition: background-color 0.3s ease;
 }
 
-.postCat:hover {
+.postCategory:hover {
   background-color: #f0e6d6; /* Light background color on hover */
   color: #d09d3d; /* Darker text color on hover */
+}
+
+.postTitleLink {
+  text-decoration: none;
 }
 
 .postTitle {

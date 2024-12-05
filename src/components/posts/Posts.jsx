@@ -57,7 +57,8 @@ export default function Posts() {
     <div className="posts">
       {postData.map((post) => (
         <Post
-          key={post.id} // Using unique `id` instead of `index`
+          key={post.id}
+          id={post.id} // Using unique `id` instead of `index`
           imgSrc={post.imgSrc}
           title={post.title}
           date={post.date}

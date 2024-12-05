@@ -46,6 +46,7 @@ export default function TopBar() {
             </li>
           </ul>
         )}
+        
         <IoSearchCircleOutline className="topSearchIcon" />
       </div>
     </div>

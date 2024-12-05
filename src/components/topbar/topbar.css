@@ -39,6 +39,8 @@
 /* Central navigation menu */
 .topCenter {
   flex: 6;
+  display: flex;
+  justify-content: center;
 }
 
 /* List styling for navigation items */
@@ -96,11 +98,83 @@
   color: #0077b5; /* Change to blue on hover */
 }
 
+/* Styling for the search input */
+.topSearchInput {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  outline: none;
+  background-color: #f0f0f0;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
 /* Responsive adjustments */
-@media (max-width: 768px) {
+
+/* For large screens (tablets and up, >= 1024px) */
+@media (min-width: 1024px) {
+  .top {
+    height: 70px; /* Slightly taller top bar for larger screens */
+    padding: 0 40px; /* More padding for large screens */
+  }
+
+  .topLeft,
+  .topRight {
+    flex: 3;
+  }
+
+  .topListItem {
+    font-size: 18px; /* Bigger text for better visibility */
+    margin-right: 35px; /* More spacing for large screens */
+  }
+
+  .topSearchInput {
+    font-size: 16px; /* Larger input font size */
+  }
+
+  .topSearchIcon {
+    font-size: 35px; /* Larger search icon */
+  }
+}
+
+/* For medium screens (>=768px and < 1024px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .top {
+    height: 60px;
+    padding: 0 30px; /* Adjust padding */
+  }
+
+  .topLeft,
+  .topRight {
+    flex: 2.5;
+  }
+
+  .topList {
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-between;
+  }
+
+  .topListItem {
+    font-size: 16px; /* Slightly smaller text for tablets */
+    margin-right: 20px; /* Adjusted margin */
+  }
+
+  .topSearchInput {
+    font-size: 15px; /* Input font size for tablets */
+    padding: 5px 10px; /* Slightly adjusted padding */
+  }
+
+  .topSearchIcon {
+    font-size: 30px; /* Adjusted icon size for tablets */
+  }
+}
+
+/* For small screens (mobile devices, < 768px) */
+@media (max-width: 767px) {
   .top {
     height: 50px; /* Adjust height for smaller screens */
-    padding: 0 10px; /* Adjust padding */
+    padding: 0 15px; /* Less padding for smaller screens */
   }
 
   .topLeft,
@@ -110,11 +184,20 @@
 
   .topList {
     flex-wrap: wrap;
-    justify-content: space-between; /* Space out items for better visibility */
+    justify-content: space-between; /* Spacing for smaller screens */
   }
 
   .topListItem {
-    font-size: 14px; /* Slightly smaller text for mobile screens */
-    margin-right: 15px; /* Reduced margin */
+    font-size: 14px; /* Smaller text for mobile */
+    margin-right: 15px; /* Reduced margin for mobile */
+  }
+
+  .topSearchInput {
+    font-size: 12px; /* Smaller input font size */
+    padding: 5px 8px; /* Adjusted padding for mobile */
+  }
+
+  .topSearchIcon {
+    font-size: 24px; /* Smaller icon for mobile */
   }
 }
