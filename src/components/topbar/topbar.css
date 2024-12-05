@@ -1,0 +1,120 @@
+/* General styling for the top bar */
+.top {
+  width: 100%;
+  height: 60px; /* Slightly increased height for better spacing */
+  background-color: #ffffff; /* Clean white background */
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 20px; /* Added padding for spacing */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  z-index: 999;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* Styling for left and right sections */
+.topLeft,
+.topRight {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for social media icons */
+.topIcon {
+  font-size: 30px;
+  margin-right: 15px; /* Increased margin for better spacing */
+  color: #444;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect for social media icons */
+.topIcon:hover {
+  color: #0077b5; /* Change to blue on hover */
+}
+
+/* Central navigation menu */
+.topCenter {
+  flex: 6;
+}
+
+/* List styling for navigation items */
+.topList {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+
+/* Styling for individual list items */
+.topListItem {
+  margin-right: 30px; /* Increased margin for better spacing */
+  font-size: 16px; /* Slightly smaller text for a cleaner look */
+  font-weight: 500; /* Slightly bolder font for better visibility */
+  text-transform: uppercase; /* Uppercase letters for a more polished look */
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for navigation items */
+.topListItem:hover {
+  color: #0077b5; /* Blue color on hover */
+}
+
+/* Styling for user profile image */
+.topImg {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px; /* Increased margin for better spacing */
+  cursor: pointer;
+  border: 2px solid #f4f4f4; /* Subtle border for profile image */
+  transition: border-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect for user profile image */
+.topImg:hover {
+  border-color: #0077b5; /* Blue border on hover */
+}
+
+/* Search icon styling */
+.topSearchIcon {
+  font-size: 30px;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for search icon */
+.topSearchIcon:hover {
+  color: #0077b5; /* Change to blue on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .top {
+    height: 50px; /* Adjust height for smaller screens */
+    padding: 0 10px; /* Adjust padding */
+  }
+
+  .topLeft,
+  .topRight {
+    flex: 2;
+  }
+
+  .topList {
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space out items for better visibility */
+  }
+
+  .topListItem {
+    font-size: 14px; /* Slightly smaller text for mobile screens */
+    margin-right: 15px; /* Reduced margin */
+  }
+}

@@ -1,0 +1,118 @@
+.sidebar {
+  flex: 3;
+  height: fit-content;
+  margin: 20px;
+  padding-bottom: 30px;
+  background-color: #fdfbfb;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebarItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.sidebarTitle {
+  margin: 10px 0;
+  padding: 5px;
+  width: 80%;
+  border-top: solid 1px #a7a4a4;
+  border-bottom: solid 1px #a7a4a4;
+  text-align: center;
+  font-family: "Varela Round", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #222222;
+  font-weight: 600;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.sidebarItem > img {
+  margin-top: 15px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sidebarItem > p {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #555555;
+}
+
+.sidebarList {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ensure space between items */
+}
+
+.sidebarListItem {
+  width: 48%; /* Each item takes up 48% of the width */
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555555;
+  text-align: center; /* Center the text inside the items */
+  transition: color 0.3s ease;
+}
+
+.sidebarListItem:hover {
+  color: #3498db; /* Hover effect */
+}
+
+.sidebarSocial {
+  margin-top: 15px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebarIcon {
+  font-size: 20px;
+  margin-left: 15px;
+  transition: transform 0.3s ease;
+}
+
+.sidebarIcon:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    margin: 10px;
+    padding-bottom: 20px;
+  }
+
+  .sidebarTitle {
+    font-size: 16px;
+    width: 90%;
+  }
+
+  .sidebarItem > img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .sidebarListItem {
+    width: 100%; /* Stack list items vertically on smaller screens */
+    margin-top: 10px;
+  }
+
+  .sidebarSocial {
+    width: 200px;
+  }
+}

@@ -1,0 +1,57 @@
+/* Main header container */
+.header {
+  width: 100%;
+  margin-top: 60px; /* Space from the top of the viewport */
+  position: relative; /* Make sure child elements are positioned correctly */
+  overflow: hidden; /* Prevents the content from overflowing */
+}
+
+/* Header titles container */
+.headerTitles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lora", serif;
+  color: #444;
+  position: absolute; /* Positioned over the image */
+  top: 50%; /* Centers vertically */
+  left: 50%; /* Centers horizontally */
+  transform: translate(-50%, -50%); /* Adjusts for offset */
+  text-align: center;
+  z-index: 10; /* Ensures the text is above the image */
+}
+
+/* Small header title */
+.headerTitleSm {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8); /* Light, translucent white */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle text shadow for better visibility */
+}
+
+/* Large header title */
+.headerTitleLg {
+  font-size: 100px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: white; /* Bright, clean white */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Enhanced shadow for readability */
+}
+
+/* Header image styling */
+.headerImg {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  filter: brightness(50%); /* Darkens the image for contrast */
+  transition: filter 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* Optional: Add hover effect on image to brighten */
+.headerImg:hover {
+  filter: brightness(70%); /* Lighter image when hovered */
+}
